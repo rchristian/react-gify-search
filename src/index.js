@@ -26,6 +26,7 @@ class App extends React.Component {
 
 		this.state = {
 			gifs: [],
+			term: '',
 			showPopup: false,
 			selectedGif: null,
 			num: null,
@@ -50,11 +51,14 @@ class App extends React.Component {
 		if(term === '') {
 			return;
 		}
+		this.setState({
+			term: term,
+		})
 		this.fetchGifs(term, 25);
 	};
 
 	onMoreSearch = (e) => {
-		this.fetchGifs(this.input.value, this.state.num + 25); //fix term handling
+		this.fetchGifs(this.state.term, this.state.num + 25);
 	}
 
 	fetchGifs = (term, num) => {
