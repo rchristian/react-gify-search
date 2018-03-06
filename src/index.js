@@ -7,18 +7,20 @@ import LoadButton from './components/LoadButton';
 import request from 'superagent';
 import './styles/styles.css';
 
-const applyUpdateResults = (res) => (prevState) => ({
+const applyUpdateResults = (res, num, offset) => (prevState) => ({
   gifs: [...prevState.gifs, ...res.body.data],
-  num: res.num,
+  num: num,
+  offset: offset,
 });
 
-const applySetResults = (res) => (prevState) => ({
+const applySetResults = (res, num, offset) => (prevState) => ({
 	gifs: res.body.data,
-	num: res.num,
+	num: num,
+	offset: offset,
 });
 
-const gifyURL = (term, num) => 
-	`http://api.giphy.com/v1/gifs/search?q=${term.replace(/\s/g, '+')}&api_key=dc6zaTOxFJmzC&limit=${num}`;
+const gifyURL = (term, num, offset) => 
+	`http://api.giphy.com/v1/gifs/search?q=${term.replace(/\s/g, '+')}&api_key=dc6zaTOxFJmzC&limit=${num}&offset=${offset}`;
 
 class App extends React.Component {
 	constructor() {
@@ -30,6 +32,7 @@ class App extends React.Component {
 			showPopup: false,
 			selectedGif: null,
 			num: null,
+			offset: null,
 		}
 	}
 
@@ -54,23 +57,23 @@ class App extends React.Component {
 		this.setState({
 			term: term,
 		})
-		this.fetchGifs(term, 25);
+		this.fetchGifs(term, 25, 0);
 	};
 
 	onMoreSearch = (e) => {
-		this.fetchGifs(this.state.term, this.state.num + 25);
+		this.fetchGifs(this.state.term, this.state.num + 25, this.state.offset + 25);
 	}
 
-	fetchGifs = (term, num) => {
-		request.get(gifyURL(term, num), (err, res) => {
-			this.onSetResults(res, num)
+	fetchGifs = (term, num, offset) => {
+		request.get(gifyURL(term, num, offset), (err, res) => {
+			this.onSetResults(res, num, offset)
 		});
 	}
 
-	onSetResults = (res, num) => {
-		num === 25
-			? this.setState(applySetResults(res))
-			: this.setState(applyUpdateResults(res));
+	onSetResults = (res, num, offset) => {
+		num === 25 && offset === 0
+			? this.setState(applySetResults(res, num, offset))
+			: this.setState(applyUpdateResults(res, num, offset));
 	}
 
 	render() {
