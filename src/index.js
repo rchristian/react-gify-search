@@ -14,7 +14,7 @@ const applyUpdateResults = (res, num, offset) => (prevState) => ({
   offset: offset,
 });
 
-const applySetResults = (res, num, offset) => (prevState) => ({
+const applySetResults = (res, num, offset) => () => ({
 	gifs: res.body.data,
 	num: num,
 	offset: offset,
@@ -61,7 +61,7 @@ class App extends React.Component {
 		this.fetchGifs(term, 25, 0);
 	};
 
-	onMoreSearch = (e) => {
+	onMoreSearch = () => {
 		this.fetchGifs(this.state.term, this.state.num + 25, this.state.offset + 25);
 	}
 
@@ -82,7 +82,7 @@ class App extends React.Component {
 			<div>
 				<SearchBar onTermChange={this.handleFirstSearch} />
 				<GifList gifs={this.state.gifs}  
-						 onGifSelect={selectedGif => this.openPopup(selectedGif) } />
+						onGifSelect={selectedGif => this.openPopup(selectedGif) } />
 				{this.state.showPopup ? 
 					<GifPopup
 						selectedGif={this.state.selectedGif}
