@@ -5,6 +5,7 @@ import SearchBar from './components/SearchBar';
 import GifPopup from './components/GifPopup';
 import LoadButton from './components/LoadButton';
 import request from 'superagent';
+import 'bootstrap/dist/css/bootstrap.css';
 import './styles/styles.css';
 
 const applyUpdateResults = (res, num, offset) => (prevState) => ({
