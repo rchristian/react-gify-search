@@ -51,6 +51,13 @@
     height: 50px;
     text-align: center;
     width: 12%;
+    background-color: #30f26c;
+    border: none;
+}
+
+.copy-btn:active,
+.load-more:active {
+    background-color: #54bf39;
 }
 
 .popup-wrap .close-btn {
@@ -62,18 +69,18 @@
 }
 
 .more-btn {
-    margin: 0 auto;
+    text-align: center;
 }
 
 .load-more {
     cursor: pointer;
     border: none;
-    border-radius: 15%;
     color: #ffffff;
     font-size: 1.4em;
-    background-color: #897062;
+    background-color: #30f26c;
     width: 20em;
     height: 2.4em;
+    margin-top: 2.5em;
     margin-bottom: 2.5em;
 }
 
