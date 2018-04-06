@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import GifItem from './GifItem';
 
 const GifList = (props) => {
@@ -15,5 +16,11 @@ const GifList = (props) => {
 		<div className="gif-list">{gifItems}</div>
 	);
 };
+
+GifList.propTypes = {
+	gifs: PropTypes.object.isRequired,
+	openPopup: PropTypes.func.isRequired,
+	onGifSelect: PropTypes.func.isRequired
+}
 
 export default GifList;

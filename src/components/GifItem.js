@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const GifItem = ({gif, onGifSelect}) => {
 	return (
@@ -7,5 +8,10 @@ const GifItem = ({gif, onGifSelect}) => {
 		</div>
 	)
 };
+
+GifItem.propTypes = {
+	gif: PropTypes.object.isRequired,
+	onGifSelect: PropTypes.func.isRequired
+}
 
 export default GifItem;
