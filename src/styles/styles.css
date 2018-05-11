@@ -73,15 +73,18 @@
 }
 
 .load-more {
-    cursor: pointer;
     border: none;
     color: #ffffff;
     font-size: 1.4em;
     background-color: #30f26c;
-    width: 20em;
     height: 2.4em;
     margin-top: 2.5em;
     margin-bottom: 2.5em;
+}
+
+input,
+.load-more {
+    width: 100%;
 }
 
 input {
@@ -90,48 +93,10 @@ input {
     height: 50px;
     margin: 0 auto;
     text-align: center;
-    width: 50%;
+    padding-top: 20px;
 }
 
 svg {
     color: #ffffff;
     width: 2.125rem;
-}
-
-@media only screen and (min-width: 400px) {
-    .gif-list {
-        -moz-column-count: 2;
-        -webkit-column-count: 2;
-        column-count: 2;
-    }
-}
-
-@media only screen and (min-width: 700px) {
-    .gif-list {
-        -moz-column-count: 3;
-        -webkit-column-count: 3;
-        column-count: 3;
-    }
-}
-
-@media only screen and (min-width: 900px) {
-    .gif-list {
-        -moz-column-count: 4;
-        -webkit-column-count: 4;
-        column-count: 4;
-    }
-}
-
-@media only screen and (min-width: 1100px) {
-    .gif-list {
-        -moz-column-count: 5;
-        -webkit-column-count: 5;
-        column-count: 5;
-    }
-}
-
-@media only screen and (min-width: 1280px) {
-    .app {
-        width: 1140px;
-    }
 }
