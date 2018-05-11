@@ -7,7 +7,7 @@ import LoadButton from './components/LoadButton';
 import request from 'superagent';
 import 'bootstrap/dist/css/bootstrap.css';
 import './styles/styles.css';
-import { Grid, Row } from 'react-bootstrap';
+import { Grid } from 'react-bootstrap';
 
 const applyUpdateResults = (res, num, offset) => (prevState) => ({
   gifs: [...prevState.gifs, ...res.body.data],
