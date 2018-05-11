@@ -7,6 +7,7 @@ import LoadButton from './components/LoadButton';
 import request from 'superagent';
 import 'bootstrap/dist/css/bootstrap.css';
 import './styles/styles.css';
+import { Grid, Row } from 'react-bootstrap';
 
 const applyUpdateResults = (res, num, offset) => (prevState) => ({
   gifs: [...prevState.gifs, ...res.body.data],
@@ -79,7 +80,7 @@ class App extends React.Component {
 
 	render() {
 		return (
-			<div>
+			<Grid>
 				<SearchBar onTermChange={this.handleFirstSearch} />
 				<GifList gifs={this.state.gifs}  
 						onGifSelect={selectedGif => this.openPopup(selectedGif) } />
@@ -93,7 +94,7 @@ class App extends React.Component {
 					<LoadButton onLoadMore={this.onMoreSearch} />
 					: null
 				}
-			</div>
+			</Grid>
 		);
 	}
 }

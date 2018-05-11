@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import GifItem from './GifItem';
-import { Grid, Row, Col } from 'react-bootstrap';
+import { Row } from 'react-bootstrap';
 
 const GifList = (props) => {
 	const gifItems = props.gifs.map((img) => {
@@ -14,13 +14,7 @@ const GifList = (props) => {
 	});
 
 	return (
-		<Grid>
-			<Row>
-				<Col xs={12} ms={2} md={4} lg={4}>
-					<div className="gif-list">{gifItems}</div>
-				</Col>
-			</Row>
-		</Grid>
+		<Row className="gif-list">{gifItems}</Row>
 	);
 };
 

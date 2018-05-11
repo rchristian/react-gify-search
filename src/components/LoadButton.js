@@ -4,17 +4,13 @@ import {Grid, Row, Col, Button } from 'react-bootstrap';
 
 const LoadButton = (props) => {
 	return (
-		<Grid>
-			<Row>
-				<Col xs={12} md={12} lg={12}>
-					<div className="more-btn">
-						<Button className="load-more" onClick={props.onLoadMore}>
-							Load More
-						</Button>
-					</div>
-				</Col>
-			</Row>
-		</Grid>
+		<Row className="more-btn">
+			<Col xs={12} md={12} lg={12}>
+				<Button className="load-more" onClick={props.onLoadMore}>
+					Load More
+				</Button>
+			</Col>
+		</Row>
 	)
 };
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Grid, Row, Col } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 
 class SearchBar extends React.Component {
 	constructor() {
@@ -15,15 +15,11 @@ class SearchBar extends React.Component {
 
 	render() {
 		return (
-			<Grid>
-				<Row>
-					<Col xs={12} md={12} ls={12}>
-						<div className="search">
-							<input onChange={e => this.onInputChange(e.target.value)} />
-						</div>
-					</Col>
-				</Row>
-			</Grid>
+			<Row className="search">
+				<Col xs={12} md={12} ls={12}>
+					<input onChange={e => this.onInputChange(e.target.value)} />
+				</Col>
+			</Row>
 		);
 	}
 }

@@ -1,11 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Col } from 'react-bootstrap';
 
 const GifItem = ({gif, onGifSelect}) => {
 	return (
-		<div className="gif-item" onClick={() => onGifSelect(gif)}>
-			<img src={gif.images.downsized.url} alt='' />
-		</div>
+		<Col lg={4} sm={4} md={4} xs={12}>
+			<div className="gif-item" onClick={() => onGifSelect(gif)}>
+				<img src={gif.images.downsized.url} alt='' />
+			</div>
+		</Col>
 	)
 };
 

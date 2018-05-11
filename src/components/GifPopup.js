@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
+import { Row, Col } from 'react-bootstrap';
 
 class GifPopup extends React.Component {
 	constructor() {
@@ -17,7 +18,7 @@ class GifPopup extends React.Component {
 
 	render() {
 		return (
-			<div className="popup-wrap">
+			<Row className="popup-wrap">
 				<div className="popup-content">
 					<span className="close-btn" onClick={this.props.closePopup}>x</span>
 					<img src={this.props.selectedGif.images.original.url} alt='' />
@@ -39,7 +40,7 @@ class GifPopup extends React.Component {
 						</CopyToClipboard>
 					</div>
 				</div>
-			</div>
+			</Row>
 		)
 	}
 }
