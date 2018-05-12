@@ -3,6 +3,10 @@
     width: 90%;
 }
 
+.search {
+    padding-top: 20px;
+}
+
 .gif-item {
     box-shadow: 2px 2px 4px 0 #ccc;
     box-sizing: border-box;
