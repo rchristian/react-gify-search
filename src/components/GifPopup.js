@@ -23,6 +23,7 @@ class GifPopup extends React.Component {
 					<span className="close-btn" onClick={this.props.closePopup}>
 						&times;
 					</span>
+					<br />
 					<img src={this.props.selectedGif.images.original.url} alt='' />
 					<form className="copy-content">
 						<FormGroup>
