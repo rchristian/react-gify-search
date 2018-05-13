@@ -4,7 +4,7 @@ import { Col } from 'react-bootstrap';
 
 const GifItem = ({gif, onGifSelect}) => {
 	return (
-		<Col lg={4} sm={4} md={4} xs={12}>
+		<Col lg={4} sm={12} md={6} xs={12}>
 			<div className="gif-item" onClick={() => onGifSelect(gif)}>
 				<img src={gif.images.downsized.url} alt='' />
 			</div>
