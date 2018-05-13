@@ -7,6 +7,19 @@
     padding-top: 20px;
 }
 
+.search input {
+    font-size: 22px;
+    height: 50px;
+    line-height: 50px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.search input,
+.load-more {
+    width: 100%;
+}
+
 .gif-item {
     box-shadow: 2px 2px 4px 0 #ccc;
     box-sizing: border-box;
@@ -28,48 +41,64 @@
 }
 
 .popup-wrap {
-      position: fixed;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background-color: rgba(0,0,0,0.7);
-      padding: 50px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.7);
+    padding: 50px;
+}
+
+.popup-wrap .close-btn {
+    /* float: right; */
+    cursor: pointer;
+    font-size: 1.5em;
+    color: rgba(0,0,0,0.6);
+    font-family: sans-serif;
+}
+
+.popup-wrap .copy-content {
+    margin-top: 25px;
 }
 
 .popup-content {
     text-align: center;
     background-color: #ffffff;
     margin: 0 auto;
-    max-width: 500px;
     min-height: 300px;
     padding: 30px;
 }
 
-.gif-link,
-.copy-btn {
-    display: inline-block;
+.popup-content img {
+    max-width: 480px;
+    max-height: 380px;
+}
+
+.input-group-addon {
+    height: 50px;
+    line-height: 50px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .copy-btn {
     height: 50px;
     text-align: center;
-    width: 12%;
+    width: 50px;
     background-color: #30f26c;
     border: none;
+}
+
+.copy-btn svg {
+    margin-top: 5px;
+    color: #ffffff;
+    width: 2.125rem;
 }
 
 .copy-btn:active,
 .load-more:active {
     background-color: #54bf39;
-}
-
-.popup-wrap .close-btn {
-    float: right;
-    cursor: pointer;
-    font-size: 1.5em;
-    color: rgba(0,0,0,0.6);
-    font-family: sans-serif;
 }
 
 .more-btn {
@@ -84,23 +113,4 @@
     height: 2.4em;
     margin-top: 2.5em;
     margin-bottom: 2.5em;
-}
-
-input,
-.load-more {
-    width: 100%;
-}
-
-input {
-    display: block;
-    font-size: 22px;
-    height: 50px;
-    margin: 0 auto;
-    text-align: center;
-    padding-top: 20px;
-}
-
-svg {
-    color: #ffffff;
-    width: 2.125rem;
 }
