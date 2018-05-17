@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
-import { FormGroup, InputGroup, FormControl, Row, Col } from 'react-bootstrap';
+import { FormGroup, InputGroup, FormControl, Row } from 'react-bootstrap';
 
 class GifPopup extends React.Component {
 	constructor() {
