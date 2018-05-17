@@ -114,3 +114,24 @@
     margin-top: 2.5em;
     margin-bottom: 2.5em;
 }
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+    .popup-content img {
+        max-width: 50%;
+    }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+    .popup-content img {
+        max-width: 50%;
+    }
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 480px) {
+    .popup-content img {
+        max-width: 100%;
+    }
+}
