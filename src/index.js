@@ -22,7 +22,7 @@ const applySetResults = (res, num, offset) => () => ({
 });
 
 const gifyURL = (term, num, offset) => 
-	`http://api.giphy.com/v1/gifs/search?q=${term.replace(/\s/g, '+')}&api_key=dc6zaTOxFJmzC&limit=${num}&offset=${offset}`;
+	`https://api.giphy.com/v1/gifs/search?q=${term.replace(/\s/g, '+')}&api_key=dc6zaTOxFJmzC&limit=${num}&offset=${offset}`;
 
 class App extends React.Component {
 	constructor() {
